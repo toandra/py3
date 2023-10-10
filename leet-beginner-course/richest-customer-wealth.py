@@ -2,7 +2,7 @@ class Solution:
     def maximumWealth(self, accounts: list[list[int]]) -> int:
 
         results = []
-        largest = 0
+        most_biggly = 0
         
         for account_index, account in enumerate(accounts): 
             total = 0
@@ -11,12 +11,12 @@ class Solution:
             results.append(total)
 
         for result in results: 
-            if largest == 0: 
-                largest = result
-            if largest < result:
-                largest = result
+            if most_biggly == 0: 
+                most_biggly = result
+            if most_biggly < result:
+                most_biggly = result
 
-        return largest
+        return most_biggly
 
 
 print(Solution().maximumWealth([[1,2,3],[12,1,22],[2,2,2]]))
