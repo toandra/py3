@@ -4,10 +4,10 @@ class Solution:
         results = []
         most_biggly = 0
         
-        for account_index, account in enumerate(accounts): 
+        for account in accounts: 
             total = 0
-            for wealth_index, wealth in enumerate(account): 
-                total += accounts[account_index][wealth_index]  
+            for wealth in account: 
+                total += wealth  
             results.append(total)
 
         for result in results: 
